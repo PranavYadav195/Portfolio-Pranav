@@ -7,10 +7,30 @@ import pic from "../pranav-image.gif";
 export default function Navbar() {
   
   const [menu,setMenu]=useState(false)
+  const [status,setStatus] =useState(true)
+  const toggle=()=>{
+    
+      if(menu){
+        setMenu(false)
+      }
+      else{
+        setMenu(true)
+      }
+       if(status){
+        setStatus(false)
+       }
+       else{
+        setStatus(true)
+       }
+  
 
+  }
+  
 
   
   return (
+    
+    
    
     <>
     <header className='border-10 fixed top-0 right-0 left-0 bg-[white] border-b-4 shadow-lg'>
@@ -25,23 +45,27 @@ export default function Navbar() {
          </div>
 
         </div>
-        <div onClick={()=>setMenu(!menu)} className='md:hidden'>
-       {menu?<MdOutlineMenu size={24} />:<IoCloseSharp size={24} />}
+        <div onClick={()=>toggle()} className='md:hidden' >
+       {menu?<MdOutlineMenu 
+        size={24} />:<IoCloseSharp size={24} />}
        </div>
 
-        <div className='   mx-1 md:static absolute right-0 top-[8%] g-[red] h-[40%] w-[30%] md:min-h-fit  md:w-auto'>
-          <ul className='flex  flex-col mx-5 md:flex-row md:items-center space-x-4 '>
-            <li className='px-1 hover:text-[red]  pt-4 text-2xl	'><Link onClick={()=>setMenu(!menu)} to="home" smooth={true} duration={500} offset={-70} activeClass='active'>home</Link></li>
-            <li className='px-1 hover:text-[red]  pt-4 text-2xl 	'><Link to="about"  smooth={true} duration={500} offset={-70} activeClass='active'>about</Link></li>
-            <li className='px-1 hover:text-[red] pt-4 text-2xl	 '><Link to="portfolio" smooth={true} duration={500} offset={-70} activeClass='active'>portfolio</Link></li>
-            <li className='px-1 hover:text-[red] pt-4 text-2xl	 '><Link to="experience" smooth={true} duration={500} offset={-70} activeClass='active'>experinece</Link></li>
-            <li className='px-1 hover:text-[red] pt-4 text-2xl	 '><Link to="contact" smooth={true} duration={500} offset={-70} activeClass='active'>contact</Link></li>
-            <button className='bg-[green]  md:hidden'>click </button>
-          </ul>
-       
-    
-    
-        </div>
+{
+  status?
+  <div className='   mx-1 md:static absolute right-0 top-[100%] g-[red] h-[2000%] md:h-[30%] w-[100%] md:bg-white bg-black md:min-h-fit  md:w-auto '>
+    <ul className='flex  flex-col mx-5 md:flex-row md:items-center space-x-4 md:text-black text-white items-center justify-center '>
+      <li className='px-1 hover:text-[red]  pt-4 text-2xl	'><Link onClick={()=>setMenu(!menu)} to="home" smooth={true} duration={500} offset={-70} activeClass='active'>home</Link></li>
+      <li className='px-1 hover:text-[red]  pt-4 text-2xl 	'><Link to="about"  smooth={true} duration={500} offset={-70} activeClass='active'>about</Link></li>
+      <li className='px-1 hover:text-[red] pt-4 text-2xl	 '><Link to="portfolio" smooth={true} duration={500} offset={-70} activeClass='active'>portfolio</Link></li>
+      <li className='px-1 hover:text-[red] pt-4 text-2xl	 '><Link to="experience" smooth={true} duration={500} offset={-70} activeClass='active'>experinece</Link></li>
+      <li className='px-1 hover:text-[red] pt-4 text-2xl	 '><Link to="contact" smooth={true} duration={500} offset={-70} activeClass='active'>contact</Link></li>
+      
+    </ul>
+ 
+
+
+  </div>:null
+}
         
         
         

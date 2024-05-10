@@ -11,7 +11,7 @@ import pic from "../pranav-image.gif";
 export default function Main() {
   return (
     <>
-      <div name="home" className="m-10">
+      <div name="home" className="m-10 mt-40">
         <div className="flex md:flex-row flex-col w-[92%] m-auto">
           <div className="md:w-1/2 mt-6">
             <p className="text-xl">Welcome In My Feed</p>
