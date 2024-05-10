@@ -6,7 +6,7 @@ export default function About() {
       <div  name="about" className="mx-16 my-4 space-y-10">
         <p className="md:text-3xl text-2xl underline">ABOUT</p>
         <p className="text-xl">
-          Hello, I'm Akhil, a passionate Web developer with a keen eye for MERN
+          Hello, I'm Pranav, a passionate Web developer with a keen eye for MERN
           Stack . With a background in IT, I strive to create impactful and
           visually stunning Software solutions that leave a lasting impression.
         </p>

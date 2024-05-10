@@ -7,7 +7,7 @@ import pic from "../pranav-image.gif";
 export default function Navbar() {
   
   const [menu,setMenu]=useState(false)
-  const [status,setStatus] =useState(true)
+  const [status,setStatus] =useState(false)
   const toggle=()=>{
     
       if(menu){
